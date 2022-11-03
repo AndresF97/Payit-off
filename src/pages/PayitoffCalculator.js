@@ -1,16 +1,15 @@
 import React from 'react'
-import Form from '../components/Form'
 import Result from '../components/Result'
+import FormWrapper from '../components/FormWrapper'
 
 
 function PayitoffCalculator(){
     return(
         <main>
-            <h1>PayitoffCalculator</h1>
             <br></br>
-             {/* Form should bring FormWrapper and LoanContainer form teh components */}
+             {/* Form should bring FormWrapper and LoanContainer form the components */}
             <section>
-                 <Form/>
+                 <FormWrapper/>
             </section>
             <br></br>
             <section>

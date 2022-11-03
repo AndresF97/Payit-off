@@ -1,10 +1,12 @@
 import React from 'react'
-
+import Form from '../Form'
 
 function FormWrapper(){
     return(
         <>
-            <h1>FormWrapper</h1>
+            <form>
+                <Form/>
+            </form>
         </>
     )
 }
