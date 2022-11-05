@@ -2,7 +2,8 @@ import React from 'react'
 import Result from '../components/Result'
 import FormWrapper from '../components/FormWrapper'
 
-
+// passprops for user info 
+// add on click fucntion here
 function PayitoffCalculator(){
     return(
         <main>
