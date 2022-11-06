@@ -7,7 +7,7 @@ import FormWrapper from '../components/FormWrapper'
 function PayitoffCalculator(){
     const [userLoanInfo, setUserLoanInfo] = useState({
         typeOfDebt:'the big one',
-        minimumPayment:'',
+        minimumPayment:'very minimum',
         balance:'',
         ineterestRate:'',
         date:'',
@@ -20,7 +20,7 @@ function PayitoffCalculator(){
             <br></br>
              {/* Form should bring FormWrapper and LoanContainer form the components */}
             <section>
-                 <FormWrapper userLoanInfo={userLoanInfo}/>
+                 <FormWrapper userLoanInfo={userLoanInfo} setUserLoanInfo={setUserLoanInfo}/>
                  <button className='focus:outline-none text-white font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 calculate-btn'>Calculate <i className="fa-solid fa-money-bill"></i></button>
             </section>
             <br></br>

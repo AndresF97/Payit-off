@@ -1,10 +1,10 @@
 import React from 'react'
 import LoanContainer from '../LoanConainter'
 
-function Form({userLoanInfo}){
+function Form({userLoanInfo,setUserLoanInfo}){
     return (
         <>
-            <LoanContainer userLoanInfo={userLoanInfo}/>
+            <LoanContainer userLoanInfo={userLoanInfo} setUserLoanInfo={setUserLoanInfo}/>
 
         </>
     )

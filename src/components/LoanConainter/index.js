@@ -1,11 +1,11 @@
 import {React,useState} from 'react'
 
-function LoanContainer({userLoanInfo}) {
-    const [input,setInput] = useState('')
+function LoanContainer({userLoanInfo,setUserLoanInfo}) {
     const handleInputChange = (e) =>{
-        setInput(e.target.value)
+        const {name,value} = e.target
+        console.log(e.target.value)
+        setUserLoanInfo({...userLoanInfo, [name]:value})
     }  
-    console.log(userLoanInfo.typeOfDebt)
 
     return (
         <>
@@ -15,12 +15,13 @@ function LoanContainer({userLoanInfo}) {
                     <label htmlFor="typeOfDebt" className="block mb-2 text-sm font-medium text-gray-900">Type of debt:</label>
                     <input 
                     type="text" 
-                    name='typeOfDebt' 
+                    name='typeOfDebt'
+                    value={userLoanInfo.typeOfDebt}
+                    onChange={handleInputChange}  
                     id="typeOfDebt" 
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-dark"
-                     placeholder="Loan"
-                     onChange={handleInputChange} 
-                     required />
+                    placeholder="Loan"
+                    required />
                 </div>
                 <div>
                     <label htmlFor="minimumPayment" className="block mb-2 text-sm font-medium text-gray-900">Minimum Payment:</label>
@@ -28,6 +29,7 @@ function LoanContainer({userLoanInfo}) {
                     type="text" 
                     id="minimumPayment"
                     name='minimumPayment'
+                    value={userLoanInfo.minimumPayment}
                     onChange={handleInputChange} 
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-dark" 
                     placeholder="$123.45" 
@@ -38,6 +40,8 @@ function LoanContainer({userLoanInfo}) {
                     <input 
                     type="text" 
                     id="balance"
+                    name='balance'
+                    value={userLoanInfo.balance}
                     onChange={handleInputChange} 
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-dark" 
                     placeholder="$123.45" 
@@ -49,6 +53,7 @@ function LoanContainer({userLoanInfo}) {
                     type="text" 
                     id="ineterestRate"
                     name='ineterestRate'
+                    value={userLoanInfo.ineterestRate}
                     onChange={handleInputChange} 
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-dark" 
                     placeholder="12%" 
@@ -75,7 +80,8 @@ function LoanContainer({userLoanInfo}) {
                     <input 
                     type="text" 
                     id="extraMonth"
-                    onChange={handleInputChange} 
+                    onChange={handleInputChange}
+                    value={userLoanInfo.extraInfo} 
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-dark" 
                     placeholder="$123.45"
                     name='date'
@@ -87,6 +93,7 @@ function LoanContainer({userLoanInfo}) {
                     type="text" 
                     id="payOfMethod"
                     name='payOfMethod'
+                    value={userLoanInfo.payOfMethod}
                     onChange={handleInputChange}
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-dark" 
                     placeholder="3" 
@@ -97,8 +104,9 @@ function LoanContainer({userLoanInfo}) {
                     <label htmlFor="diseredMonth" className="mb-2 text-sm font-medium text-gray-900">Desired Months to pay off:</label>
                     <input 
                     type="text" 
-                    id="ineterestRate"
-                    name='ineterestRate'
+                    id="diseredMonth"
+                    name='diseredMonth'
+                    value={userLoanInfo.diseredMonth}
                     onChange={handleInputChange}
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-dark" 
                     placeholder="3" 
