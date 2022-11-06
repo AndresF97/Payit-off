@@ -1,9 +1,9 @@
 import {React,useState} from 'react'
 
 function LoanContainer({userLoanInfo,setUserLoanInfo}) {
+    console.log(userLoanInfo.date)
     const handleInputChange = (e) =>{
         const {name,value} = e.target
-        console.log(e.target.value)
         setUserLoanInfo({...userLoanInfo, [name]:value})
     }  
 
@@ -69,7 +69,7 @@ function LoanContainer({userLoanInfo,setUserLoanInfo}) {
                     id="date"
                     name='date' 
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-dark" 
-                    placeholder="Loan"
+                    value={userLoanInfo.date}
                     onChange={handleInputChange} 
                     required />
                 </div>

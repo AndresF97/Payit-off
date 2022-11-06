@@ -5,12 +5,16 @@ import FormWrapper from '../components/FormWrapper'
 // passprops for user info 
 // add on click fucntion here
 function PayitoffCalculator(){
+    let today = new Date()
+    let day = String(today.getDate()).padStart(2, '0');
+    let month = String(today.getMonth() + 1).padStart(2, '0');
+    let year = today.getFullYear();
     const [userLoanInfo, setUserLoanInfo] = useState({
         typeOfDebt:'the big one',
         minimumPayment:'very minimum',
-        balance:'',
-        ineterestRate:'',
-        date:'',
+        balance:'1 trillion dollars',
+        ineterestRate:'100%',
+        date:`${month}/${day}/${year}`,
         extraMonth:'',
         payOfMethod:'',
         diseredMonth:''
