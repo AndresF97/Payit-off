@@ -1,11 +1,11 @@
 import React from 'react'
 import Form from '../Form'
 
-function FormWrapper(){
+function FormWrapper({userLoanInfo}){
     return(
         <>
             <form>
-                <Form/>
+                <Form userLoanInfo={userLoanInfo}/>
             </form>
         </>
     )
