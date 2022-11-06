@@ -22,8 +22,16 @@ function PayitoffCalculator(){
         diseredMonth:'now'
     })
     // setting up button event listener
-    const FormSubmit = async(event)=>{
-        console.log('hello')
+    const FormSubmit = async()=>{
+        // console.log('hello')
+        console.log(userLoanInfo.typeOfDebt)
+        console.log(userLoanInfo.minimumPayment)
+        console.log(userLoanInfo.balance)
+        console.log(userLoanInfo.ineterestRate)
+        console.log(userLoanInfo.date)
+        console.log(userLoanInfo.extraMonth)
+        console.log(userLoanInfo.payOfMethod)
+        console.log(userLoanInfo.diseredMonth)
     }
 
 

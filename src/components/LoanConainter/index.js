@@ -1,7 +1,6 @@
 import {React,useState} from 'react'
 
 function LoanContainer({userLoanInfo,setUserLoanInfo}) {
-    console.log(userLoanInfo.date)
     const handleInputChange = (e) =>{
         const {name,value} = e.target
         setUserLoanInfo({...userLoanInfo, [name]:value})
