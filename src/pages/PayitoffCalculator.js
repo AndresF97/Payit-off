@@ -23,7 +23,6 @@ function PayitoffCalculator(){
     })
     // setting up button event listener
     const FormSubmit = async()=>{
-        // console.log('hello')
         console.log(userLoanInfo.typeOfDebt)
         console.log(userLoanInfo.minimumPayment)
         console.log(userLoanInfo.balance)
