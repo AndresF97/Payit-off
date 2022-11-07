@@ -8,23 +8,33 @@ function LoanContainer({userLoanInfo,setUserLoanInfo}) {
 
     return (
         <>
-            <h1>Debt Payment Calculator</h1>
+            <h1 className='m-10 text-xl text-white'>Debt Payment Calculator</h1>
             {/* must work on styling this having label and input with eachother */}
-            <div className="grid gap-6 mb-6 md:grid-cols-2">
-                <div className="inline-flex">
-                    <label  className="block mb-2 text-sm font-medium text-gray-900">Type of debt:</label>
-                    <input 
-                    type="text" 
+            <div className="grid gap-6 mb-6 md:grid-cols-2 p-10">
+                <div className="inline-flex w-96">
+                    <label  className="block mb-2 text-sm font-medium text-white">Type of debt:</label>
+                    <select
                     name='typeOfDebt'
+                    onChange={handleInputChange}
                     value={userLoanInfo.typeOfDebt}
-                    onChange={handleInputChange}  
-                    id="typeOfDebt" 
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-dark"
-                    placeholder="Loan"
-                    required />
+                    className="text-dark text-center bg-gray-50 border border-gray-900 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 w-full" 
+                    >
+                        <option
+                        value="Credit">
+                        Credit
+                        </option>
+                        <option
+                        value="Loan">
+                        Loan
+                        </option>
+                        <option
+                        value="Loan Shark">
+                        Loan Shark
+                        </option>
+                    </select>
                 </div>
-                <div className="inline-flex">
-                    <label htmlFor="minimumPayment" className="block mb-2 text-sm font-medium text-gray-900">Minimum Payment:</label>
+                <div className="inline-flex w-96">
+                    <label htmlFor="minimumPayment" className="block mb-2 text-sm font-medium text-white">Minimum Payment:</label>
                     <input 
                     type="text" 
                     id="minimumPayment"
@@ -35,8 +45,8 @@ function LoanContainer({userLoanInfo,setUserLoanInfo}) {
                     placeholder="$123.45" 
                     required />
                 </div>
-                <div className="inline-flex">
-                    <label htmlFor="balance" className="block mb-2 text-sm font-medium text-gray-900">Balance:</label>
+                <div className="inline-flex w-96">
+                    <label htmlFor="balance" className="block mb-2 text-sm font-medium text-white">Balance:</label>
                     <input 
                     type="text" 
                     id="balance"
@@ -47,8 +57,8 @@ function LoanContainer({userLoanInfo,setUserLoanInfo}) {
                     placeholder="$123.45" 
                     required />
                 </div>
-                <div className="inline-flex">
-                    <label htmlFor="ineterestRate" className="block mb-2 text-sm font-medium text-gray-900">Interest Rate:</label>
+                <div className="inline-flex w-96">
+                    <label htmlFor="ineterestRate" className="block mb-2 text-sm font-medium text-white">Interest Rate:</label>
                     <input 
                     type="text" 
                     id="ineterestRate"
@@ -61,9 +71,9 @@ function LoanContainer({userLoanInfo,setUserLoanInfo}) {
                 </div>
             </div>
             <br></br>
-            <div className="grid gap-6 mb-6 md:grid-cols-2">
-                <div className="inline-flex">
-                    <label htmlFor="date" className="block mb-2 text-sm font-medium text-gray-900">Starting Date:</label>
+            <div className="grid gap-6 mb-6 md:grid-cols-2 p-10">
+                <div className="inline-flex w-96">
+                    <label htmlFor="date" className="block mb-2 text-sm font-medium text-white">Starting Date:</label>
                     <input 
                     type="date" 
                     id="date"
@@ -74,10 +84,10 @@ function LoanContainer({userLoanInfo,setUserLoanInfo}) {
                     required />
                 </div>
                 <div>
-                    <h1>Pick one of the following:</h1>
-                    <div className="inline-flex">
+                    <h1 className='text-white'>Pick one of the following:</h1>
+                    <div className="inline-flex w-96">
                         <input className="m-3"type="checkbox"></input>
-                        <label htmlFor="extraMonth" className="mb-2 text-sm font-medium text-gray-900">Extra Month Amount:</label>
+                        <label htmlFor="extraMonth" className="mb-2 text-sm font-medium text-white">Extra Month Amount:</label>
                         <input 
                         type="text" 
                         id="extraMonth"
@@ -89,8 +99,8 @@ function LoanContainer({userLoanInfo,setUserLoanInfo}) {
                         required />
                     </div>
                 </div>
-                <div className="inline-flex">
-                    <label htmlFor="payOfMethod" className="block mb-2 text-sm font-medium text-gray-900">Pick Payoff Method:</label>
+                <div className="inline-flex w-96">
+                    <label htmlFor="payOfMethod" className="block mb-2 text-sm font-medium text-white">Pick Payoff Method:</label>
 
                     <select
                     name='payOfMethod'
@@ -109,9 +119,9 @@ function LoanContainer({userLoanInfo,setUserLoanInfo}) {
                     </select>
 
                 </div>
-                <div className="inline-flex">
+                <div className="inline-flex w-96">
                     <input className="m-3"type="checkbox"></input>
-                    <label htmlFor="diseredMonth" className="mb-2 text-sm font-medium text-gray-900">Desired Months to pay off:</label>
+                    <label htmlFor="diseredMonth" className="mb-2 text-sm font-medium text-white">Desired Months to pay off:</label>
                     <input 
                     type="text" 
                     id="diseredMonth"

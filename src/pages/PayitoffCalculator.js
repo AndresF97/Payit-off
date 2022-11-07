@@ -38,7 +38,7 @@ function PayitoffCalculator(){
         <main>
             <br></br>
              {/* Form should bring FormWrapper and LoanContainer form the components */}
-            <section>
+            <section className='bg-gray-800 w-fit mr-auto ml-auto rounded-lg'>
                  <FormWrapper userLoanInfo={userLoanInfo} setUserLoanInfo={setUserLoanInfo}/>
                  <button onClick={()=>{FormSubmit()}} className='focus:outline-none text-white font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 calculate-btn'>Calculate <i className="fa-solid fa-money-bill"></i></button>
             </section>
