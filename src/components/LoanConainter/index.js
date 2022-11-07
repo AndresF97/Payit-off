@@ -116,7 +116,7 @@ function LoanContainer({userLoanInfo,setUserLoanInfo}) {
                         Avalancha
                         </option>
                     </select>
-
+                    <i class="uil uil-question-circle text-white text-lg"></i>
                 </div>
                 <div className="inline-flex w-96">
                     <input className="m-3"type="checkbox"></input>
