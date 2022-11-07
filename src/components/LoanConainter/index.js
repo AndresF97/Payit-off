@@ -8,9 +8,9 @@ function LoanContainer({userLoanInfo,setUserLoanInfo}) {
 
     return (
         <>
-            <h1 className='m-10 text-xl text-white'>Debt Payment Calculator</h1>
+            <h1 className='m-10 text-xl text-left text-white font-semibold'>Debt Payment Calculator</h1>
             {/* must work on styling this having label and input with eachother */}
-            <div className="grid gap-6 mb-6 md:grid-cols-2 p-10">
+            <div className="grid gap-6 mb-6 md:grid-cols-2 p-10 borders">
                 <div className="inline-flex w-96">
                     <label  className="block mb-2 text-sm font-medium text-white">Type of debt:</label>
                     <select
@@ -70,7 +70,6 @@ function LoanContainer({userLoanInfo,setUserLoanInfo}) {
                     required />
                 </div>
             </div>
-            <br></br>
             <div className="grid gap-6 mb-6 md:grid-cols-2 p-10">
                 <div className="inline-flex w-96">
                     <label htmlFor="date" className="block mb-2 text-sm font-medium text-white">Starting Date:</label>
@@ -84,7 +83,7 @@ function LoanContainer({userLoanInfo,setUserLoanInfo}) {
                     required />
                 </div>
                 <div>
-                    <h1 className='text-white'>Pick one of the following:</h1>
+                    <h1 className='text-white font-semibold m-2'>Pick one of the following:</h1>
                     <div className="inline-flex w-96">
                         <input className="m-3"type="checkbox"></input>
                         <label htmlFor="extraMonth" className="mb-2 text-sm font-medium text-white">Extra Month Amount:</label>

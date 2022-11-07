@@ -19,6 +19,10 @@
   background-color: #96A367;
 }
 
+.borders{
+  border: dashed #96A367;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
