@@ -8,7 +8,7 @@ function LoanContainer({userLoanInfo,setUserLoanInfo}) {
 
     return (
         <>
-            <h1 className='m-10 text-xl text-left text-white font-semibold'>Debt Payment Calculator</h1>
+            <h1 className='m-10 text-xl text-left text-white'>Debt Payment Calculator</h1>
             {/* must work on styling this having label and input with eachother */}
             <div className="grid gap-6 mb-6 md:grid-cols-2 p-10 borders">
                 <div className="inline-flex w-96">
@@ -77,7 +77,7 @@ function LoanContainer({userLoanInfo,setUserLoanInfo}) {
                     type="date" 
                     id="date"
                     name='date' 
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-dark" 
+                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-dark" 
                     value={userLoanInfo.date}
                     onChange={handleInputChange} 
                     required />
@@ -116,9 +116,9 @@ function LoanContainer({userLoanInfo,setUserLoanInfo}) {
                         Avalancha
                         </option>
                     </select>
-                    <i class="uil uil-question-circle text-white text-lg"></i>
+                    <i className="uil uil-question-circle text-white text-lg"></i>
                 </div>
-                <div className="inline-flex w-96">
+                <div className="inline-flex w-96" aria-disabled>
                     <input className="m-3"type="checkbox"></input>
                     <label htmlFor="diseredMonth" className="mb-2 text-sm font-medium text-white">Desired Months to pay off:</label>
                     <input 
